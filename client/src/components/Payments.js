@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { mapStateToProps } from "../store";
 import AddPayment from "./AddPayment";
-export class Payments extends Component {
+class Payments extends Component {
+  
   handleDeletePayment = (id, email) => {
     this.props.dispatch({ type: "DELETE_PAYMENT", payload: id, email: email });
   };
-  handleEditTenant = (e, id, email) => {
+  handleEditPayment = (e, id, email) => {
     e.preventDefault();
     this.props.dispatch({
       type: "EDIT_PAYMENT",
@@ -23,6 +24,7 @@ export class Payments extends Component {
     });
   };
   render() {
+    console.log(this.props.payments,this.props.rooms)
     return (
       <div>
 

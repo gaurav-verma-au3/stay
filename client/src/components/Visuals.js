@@ -16,7 +16,9 @@ class Visuals extends Component {
             <PaymentsChart />
           </div>
         </div>
+        <hr />
       </div>
+
     );
   }
 }

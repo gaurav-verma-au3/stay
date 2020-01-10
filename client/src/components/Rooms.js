@@ -25,7 +25,7 @@ class Rooms extends Component {
   render() {
     return (
       <div>
-        <hr />
+        
         <AddRoom />
 
         <div className="table-responsive">
@@ -49,23 +49,23 @@ class Rooms extends Component {
             </thead>
             <tbody>
               {this.props.rooms.map((room, index) => {
+
                 return (
                   <tr key={room._id}>
                     <td>{index + 1}</td>
-                    <td>
-                      <div className="container-fluid text-center p-0 m-0">
+                    <td className="">
+                      <div className="container-fluid text-center">
 
-                        {                      
+                        {this.props.tenants.length!==0 ?                      
 
                           this.props.tenants.map(tenant => {
-                            let counter = 0;
                             if (tenant.roomAlloted === room.name)
-                            {counter +=1
-                            return <Link to={`tenants/${tenant._id}`} ><strong key={tenant._id}>| {tenant.name} |</strong></Link>}
-                            else if (counter===0){
-                          return <strong><p className="text-center m-0 text-danger">VACCANT</p></strong>
-                            }
-                        })}
+                            
+                            return <Link key={tenant._id} to={`tenants/${tenant._id}`} ><strong className="" key={tenant._id}>| {tenant.name} |</strong></Link>
+                            else return null
+                            
+                          })
+                          : <strong><p className="text-center m-0 text-danger">VACCANT</p></strong>}
                       </div>
                     </td>
                     <td> {room.bedCount} </td>

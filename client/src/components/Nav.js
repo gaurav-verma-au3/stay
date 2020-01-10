@@ -1,94 +1,40 @@
-import React, { Component } from "react";
+import React from "react";
+import {Link} from 'react-router-dom'
 import { connect } from "react-redux";
 import { mapStateToProps } from "../store";
-class Nav extends Component {
+ 
+class Nav extends React.Component {
+ 
+ 
   render() {
     return (
-    
-    
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ height: "10vh" }}>
-          <a className="navbar-brand " href="/">
-            PG-Admin
-          </a>
-          {this.props.isLoggedIn.loggedIn ? (
-            <h5>Welcome {this.props.isLoggedIn.user.name}</h5>
-          ) : null}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="main-nav">
-            <ul className="navbar-nav text-white ml-auto w-25 mt-2 mt-lg-0">
-              {window.location.pathname === "/login" ||
-              window.location.pathname === "/signup" ||
-              window.location.pathname === "/about" ? (
-                window.location.pathname === "/login" ? (
-                  <>
-                    <li className="nav-item ml-auto">
-                      <a href="/signup" className="nav-link">
-                        Signup
-                      </a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-info">
+        <a className="navbar-brand" href="/">mstay*</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">Overview<span className="sr-only">(current)</span></Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/rooms">Rooms</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/tenants">Tenants</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link " to="/payments">Payments</Link>
                     </li>
-                    <li className="nav-item ml-auto">
-                      <a href="/about" className="nav-link">
-                        About
-                      </a>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li className="nav-item ml-auto">
-                      <a href="/login" className="nav-link">
-                        Login
-                      </a>
-                    </li>
-                    <li className="nav-item ml-auto">
-                      <a href="/about" className="nav-link">
-                        About
-                      </a>
-                    </li>
-                  </>
-                )
-              ) : (
-                <>
-                  <li className="nav-item ml-auto ">
-                    <a href="/rooms" className="nav-link">
-                      Rooms
-                    </a>
-                  </li>
-                  <li className="nav-item ml-auto">
-                    <a href="/tenants" className="nav-link">
-                      Tenants
-                    </a>
-                  </li>
-                  <li className="nav-item ml-auto">
-                    <a href="/profile" className="nav-link">
-                      Profile
-                    </a>
-                  </li>
-                  <li className="nav-item ml-auto">
-                    <a href="/logout" className="nav-link">
-                      Logout
-                    </a>
-                  </li>
-                </>
-              )}
-            </ul>
-          </div>
-        </nav>
-    
-
-    
+                    <li className="nav-item">
+              <Link className="nav-link text-danger" to="/logout">Logout</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }
-
-export default connect(mapStateToProps)(Nav);
+ 
+export default connect(mapStateToProps)( Nav);

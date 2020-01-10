@@ -5,7 +5,7 @@ import axios from "axios";
 import EditTenant from "./EditTenant";
 import { Link } from "react-router-dom";
 import {API_ORIGIN_URL} from "../config"
-export class Tenants extends Component {
+export class Tenant extends Component {
   constructor(props) {
     super(props);
 
@@ -68,7 +68,7 @@ export class Tenants extends Component {
                               ? tenant.documents.id.secure_url
                               : null
                           }
-                          alt="Card image cap"
+                          alt=""
                         />
                         <div class="card-body">
                           <h5 class="card-title">ID Proof</h5>
@@ -223,9 +223,10 @@ export class Tenants extends Component {
                 </div>
               </div>
             );
+          return null;
         })}
       </div>
     );
   }
 }
-export default connect(mapStateToProps)(Tenants);
+export default connect(mapStateToProps)(Tenant);

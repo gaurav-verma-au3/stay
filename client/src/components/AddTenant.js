@@ -129,26 +129,26 @@ export class AddTenant extends Component {
                       ) : (
                         <div>
                           {" "}
-                          <div class="form-group">
+                          <div className="form-group">
                             <label>
                               <strong>Upload Id Proof</strong>
                             </label>
-                            <div class="custom-file">
+                            <div className="custom-file">
                               <input
                                 type="file"
                                 name="files"
                                 onChange={e => this.fileChangedHandler(e)}
-                                class="custom-file-input"
+                                className="custom-file-input"
                               />
-                              <label class="custom-file-label" for="customFile">
+                              <label className="custom-file-label">
                                 Choose file
                               </label>
                             </div>
                           </div>
-                          <div class="form-group">
+                          <div className="form-group">
                             <button
                               onClick={e => this.uploadImage(e, "idProof")}
-                              class="btn btn-block btn-dark"
+                              className="btn btn-block btn-dark"
                             >
                               Upload
                             </button>
@@ -166,26 +166,26 @@ export class AddTenant extends Component {
                       ) : (
                         <div>
                           {" "}
-                          <div class="form-group">
+                          <div className="form-group">
                             <label>
                               <strong>Upload Address Proof</strong>
                             </label>
-                            <div class="custom-file">
+                            <div className="custom-file">
                               <input
                                 type="file"
                                 name="files"
                                 onChange={e => this.fileChangedHandler(e)}
-                                class="custom-file-input"
+                                className="custom-file-input"
                               />
-                              <label class="custom-file-label" for="customFile">
+                              <label className="custom-file-label">
                                 Choose file
                               </label>
                             </div>
                           </div>
-                          <div class="form-group">
+                          <div className="form-group">
                             <button
                               onClick={e => this.uploadImage(e, "addressProof")}
-                              class="btn btn-block btn-dark"
+                              className="btn btn-block btn-dark"
                             >
                               Upload
                             </button>

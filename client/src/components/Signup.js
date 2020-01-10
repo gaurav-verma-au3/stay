@@ -21,10 +21,10 @@ class Signup extends Component {
         style={{ height: "90vh" }}
       >
         <form
-          className="p-5 border border-dark"
+          className="pt-5 pr-5 pl-5 bg-light border rounded"
           onSubmit={e => this.handleSubmit(e)}
         >
-          <h2 className="text-warning">Sign Up</h2>
+          <h2 >Sign Up</h2>
           <hr />
 
           <div className="form-group mt-2">
@@ -98,7 +98,7 @@ class Signup extends Component {
             </button>
             <small className="ml-5">
               Already Registered{" "}
-              <a className="text-warning" href="/login">
+              <a  href="/login">
                 <strong>Login </strong>
               </a>
               now.
