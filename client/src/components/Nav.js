@@ -1,10 +1,13 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import { connect } from "react-redux";
 import { mapStateToProps } from "../store";
  
 class Nav extends React.Component {
- 
+  handleLogout() {
+    localStorage.clear()
+    if(localStorage.getItem("pg-control")===null) window.location.reload();
+ }
  
   render() {
     return (
@@ -28,7 +31,7 @@ class Nav extends React.Component {
               <Link className="nav-link " to="/payments">Payments</Link>
                     </li>
                     <li className="nav-item">
-              <Link className="nav-link text-danger" to="/logout">Logout</Link>
+              <button className="nav-link btn btn-danger px-3" onClick={this.handleLogout}>Logout</button>
             </li>
           </ul>
         </div>

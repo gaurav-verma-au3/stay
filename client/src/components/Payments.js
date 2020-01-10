@@ -26,7 +26,7 @@ class Payments extends Component {
   render() {
     console.log(this.props.payments,this.props.rooms)
     return (
-      <div>
+      <div className="bg-light rounded">
 
         <AddPayment />
 

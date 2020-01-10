@@ -48,9 +48,11 @@
       };
 
       return (
-        <div>
-          <div className="container-fluid d-flex align-items-center justify-content-center">
-          <PieChart width={500} height={500}>
+        <div className="p-4 bg-info">
+          <h6 className="text-left mr-5" ><strong>Occupancy Status</strong></h6>
+
+          <div className="bg-light rounded" >
+          <PieChart  s width={500} height={500}>
             <Pie
               data={data}
               cx={250}
@@ -70,8 +72,8 @@
               </Pie>
 
             </PieChart>
-        </div>
-              <h6 className="text-center"><strong>Occupancy Status</strong></h6>
+          </div>
+
            </div> 
       );
     }

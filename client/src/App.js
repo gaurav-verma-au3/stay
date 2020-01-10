@@ -8,7 +8,8 @@ import { connect } from "react-redux";
 import { mapStateToProps } from "./store";
 import Tenant from './components/Tenant'
 import Rooms from "./components/Rooms";
-import   Payments  from "./components/Payments";
+import Payments from "./components/Payments";
+
 
 class App extends Component {
   handleRedirect = () => {

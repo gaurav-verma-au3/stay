@@ -103,13 +103,16 @@ class PaymentsChart extends Component {
       });
     });
     return (
-      <div>
+      <div className="p-4 bg-info">
+        <h6 className="text-left mr-5" ><strong>Payments Overview</strong></h6>
+<div className="bg-light rounded" >
         <BarChart
+
           width={500}
           height={500}
           data={data}
           margin={{
-            top: 50,
+            top: 70,
             right: 50,
             left: 50,
             bottom: 50
@@ -124,7 +127,8 @@ class PaymentsChart extends Component {
           <Bar dataKey="due" stackId="a" fill="#82ca9d" />
           <Bar dataKey="total" fill="#ffc658" />
         </BarChart>
-      </div>
+        </div>
+        </div>
     );
   }
 }

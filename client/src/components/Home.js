@@ -16,13 +16,13 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="container-fluid">
-        <div className="container-fluid ">
+      <div className="container-fluid  m-0 p-0">
+        <div className="container-fluid m-0 p-0">
           <Visuals />
         </div>
         <div className="container-fluid" style={{ height: "45vh" }}>
-          <div className="row ">
-            <div className=" col-md-12 col-sm-12">
+          <div className="row">
+            <div className=" col-md-12 p-4 bg-info  col-sm-12 ">
               <Rooms />
             </div>
             {/* 
@@ -31,7 +31,7 @@ class Home extends Component {
             </div> */}
           </div>
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 bg-info p-4">
               <Payments />
             </div>
           </div>
