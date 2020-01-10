@@ -64,7 +64,7 @@ cloudinary.config({
 
 
 
-//port
+//port declaration
 const port = process.env.PORT || 3001;
 
 //starting Server
