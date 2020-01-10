@@ -23,7 +23,7 @@
     "mongodb": "^3.4.1",
     "npm": "^6.13.4"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+  "engines": {
+    "node": "12.14.0"
   }
 }
