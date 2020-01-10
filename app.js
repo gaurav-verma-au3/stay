@@ -57,9 +57,6 @@ cloudinary.config({
 //port declaration
 const port = process.env.PORT || 3001;
 
-//starting Server
-app.listen(port);
-console.log("play it on port : " + port);
 
 
 
