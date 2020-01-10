@@ -2,7 +2,7 @@ const express = require("express");
 const md5 = require("md5");
 var cors = require("cors");
 const app = express();
-
+const path = require("path")
 
 
 const session = require("express-session");
@@ -18,8 +18,7 @@ require('dotenv').config()
 //CORS
 app.use(cors());
 
-//Static Asset Declaration
-app.use(express.static(__dirname + "/public"));
+
 
 //bodyParser Setup
 const bodyParser = require("body-parser");
@@ -72,10 +71,7 @@ const port = process.env.PORT || 3001;
 app.listen(port);
 console.log("play it on port : " + port);
 
-//static routes
-app.get("/", (req, res) => {
-  res.send("What you are upto....");
-});
+
 
 //routes
 let dashboard = require("./routes/dashboard")
@@ -90,3 +86,17 @@ app.use("/", login);
 app.use("/", tenants);
 app.use("/", register);
 app.use("/", payments);
+
+
+//Static Asset Declaration
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(__dirname + "client/build"));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
+//starting Server
+app.listen(port);
+console.log("play it on port : " + port);
