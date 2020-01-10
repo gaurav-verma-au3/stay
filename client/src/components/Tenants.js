@@ -4,7 +4,7 @@ import { mapStateToProps } from "../store";
 import axios from "axios";
 import EditTenant from "./EditTenant";
 import { Link } from "react-router-dom";
-import API_ORIGIN_URL from "../config"
+import {API_ORIGIN_URL} from "../config"
 export class Tenants extends Component {
   constructor(props) {
     super(props);

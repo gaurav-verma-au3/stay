@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import axios from "axios";
 import { mapStateToProps } from "../store";
-import API_ORIGIN_URL from "../config"
+import {API_ORIGIN_URL} from "../config"
 class EditTenant extends Component {
   constructor(props) {
     super(props);
