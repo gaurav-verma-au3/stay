@@ -17,9 +17,7 @@ router.post("/login", (req, res) => {
       console.log("failed");
       res.send({ error: true, message: "Email or Password Mismatch !!!" });
     } else {
-      if (data.password == req.body.password) req.session.loggedIn = true;
-      req.session.email = data.email;
-      req.session.user = data.name;
+      if (data.password == req.body.password);
       const { _id, name, email, pgName } = data;
       res.send({
         loggedIn: true,
@@ -31,7 +29,6 @@ router.post("/login", (req, res) => {
   });
 });
 router.get("/logout", (req, res) => {
-  req.session.destroy();
   res.redirect("/");
 });
 
@@ -74,7 +71,7 @@ router.post("/upload/:public_id", multipartMiddleware, (req, res) => {
       if (error) {
         return res.status(500).send(error);
       }
-      console.log(result)
+      console.log(result);
       cloudinary.uploader.upload(
         req.files.image.path,
         {

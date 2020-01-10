@@ -3,16 +3,6 @@ const md5 = require("md5");
 var cors = require("cors");
 const app = express();
 const path = require("path")
-
-
-const session = require("express-session");
-app.use(
-  session({
-    secret: "thissecretishere",
-    resave: true,
-    saveUninitialized: true
-  })
-);
 require('dotenv').config()
 
 //CORS
