@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import axios from "axios";
 import { mapStateToProps } from "../store";
-
+import API_ORIGIN_URL from "../config"
 class EditTenant extends Component {
   constructor(props) {
     super(props);
@@ -55,7 +55,7 @@ class EditTenant extends Component {
     );
       console.log(public_idToDelete)
       
-    axios.post(`http://localhost:3001/upload/${public_idToDelete}`, formData).then(({ data }) => {
+    axios.post(`${API_ORIGIN_URL}/upload/${public_idToDelete}`, formData).then(({ data }) => {
       if (type === "idProof") {
         this.setState({
           idStatus: "UpLoaded",

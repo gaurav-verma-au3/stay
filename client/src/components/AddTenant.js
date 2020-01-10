@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { mapStateToProps } from "../store";
 import axios from "axios";
+import API_ORIGIN_URL from '../config'
 export class AddTenant extends Component {
   constructor(props) {
     super(props);
@@ -39,8 +40,8 @@ export class AddTenant extends Component {
       this.state.selectedFile,
       this.state.selectedFile.name
     );
-
-    axios.post("http://localhost:3001/upload", formData).then(({ data }) => {
+    
+    axios.post(`${API_ORIGIN_URL}/upload`, formData).then(({ data }) => {
       if (type === "idProof") {
         this.setState({
           idStatus: "UpLoaded",

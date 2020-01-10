@@ -4,6 +4,7 @@ import { mapStateToProps } from "../store";
 import axios from "axios";
 import EditTenant from "./EditTenant";
 import { Link } from "react-router-dom";
+import API_ORIGIN_URL from "../config"
 export class Tenants extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +41,7 @@ export class Tenants extends Component {
       this.state.selectedFile.name
     );
 
-    axios.post("http://localhost:3001/upload", formData).then(({ data }) => {
+    axios.post(`${API_ORIGIN_URL}/upload`, formData).then(({ data }) => {
       this.setState({
         image: data
       });

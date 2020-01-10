@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { mapStateToProps } from "../store";
-import Tenants from "./Tenants";
 import Visuals from "./Visuals";
 import Rooms from "./Rooms";
 import Payments from "./Payments";
