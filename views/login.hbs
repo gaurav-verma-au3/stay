@@ -1,0 +1,47 @@
+<div class="container tm-mt-big tm-mb-big">
+
+    <div class="row">
+        <div class="col-12 mx-auto tm-login-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="tm-block-title mb-3">Welcome to Dashboard, Login</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12">
+                        <form action="/login" method="post" class="tm-login-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input name="email" type="email" class=" rounded form-control validate" id="email"
+                                    required />
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="password">Password</label>
+                                <input name="password" type="password" class="rounded form-control validate"
+                                    id="password" required />
+                            </div>
+                            {{#if errMessage}}
+                            <div class="errBox alert alert-danger">
+                                {{errMessage}}
+                            </div>
+                            {{/if}}
+                            <div class="form-group mt-3">
+                                <button type="submit" class=" rounded btn btn-primary btn-block text-uppercase">
+                                    Login
+                                </button>
+                            </div>
+                            <button class="mt-2 rounded btn btn-primary btn-block text-uppercase">
+                                Forgot your password?
+                            </button>
+                        </form>
+                        <a href="/register"><button class="mt-2 rounded btn btn-primary btn-block text-uppercase">
+                                New User <strong>register</strong> Here
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

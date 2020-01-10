@@ -1,0 +1,66 @@
+<div class="container tm-mt-big tm-mb-big">
+
+
+    <div class="row">
+        <div class="col-12 mx-auto tm-login-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="tm-block-title mb-4">Welcome to Dashboard, Register</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {{#if message}}
+                        <div class="successBox alert alert-success">
+                            {{message}}
+                        </div>
+                        {{/if}}
+                        {{#if errMessage}}
+                        <div class="errBox alert alert-danger">
+                            {{errMessage}}
+                        </div>
+                        {{/if}}
+                        <form action="/register" method="post" class="tm-login-form">
+                            <div class="form-group mt-2">
+                                <label for="name">Full Name</label>
+                                <input name="name" type="text" class="rounded form-control validate" id="name"
+                                    placeholder="Full Name" required />
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="email">Email</label>
+                                <input name="email" type="email" class="rounded form-control validate" id="email"
+                                    placeholder="E-Mail" required />
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="pgName">P.G. Name</label>
+                                <input name="pgName" type="text" class="rounded form-control validate" id="email"
+                                    placeholder="P.G. Name" required />
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="password">Password</label>
+                                <input name="password" type="password" class="rounded form-control validate"
+                                    id="password" placeholder="Password" required />
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="RePassword">Re Enter Password</label>
+                                <input name="RePassword" type="password" class="rounded form-control validate"
+                                    id="RePassword" placeholder="Re-Type Password" required />
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="rounded btn btn-primary btn-block text-uppercase">
+                                    Register
+                                </button>
+                            </div>
+
+                        </form>
+                        <a href="/login"><button class=" rounded btn btn-primary btn-block text-uppercase">
+                                Already Registered ? <strong>Login</strong>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

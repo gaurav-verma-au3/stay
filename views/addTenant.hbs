@@ -1,0 +1,89 @@
+<div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-block-title d-inline-block">Add Product</h2>
+                    </div>
+                </div>
+                <div class="row tm-edit-product-row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <form action="/tenants/add" method="POST" class="tm-edit-product-form">
+                            <div class="form-group mb-3">
+                                <label for="name">Tenant Name
+                                </label>
+                                <input id="name" name="name" type="text" class="form-control validate" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="contact">Phone Number</label>
+                                <input id="contact" name="contact" type="text" class="form-control validate" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="fatherName">Fathers Name</label>
+                                <input id="fatherName" name="fatherName" type="text" class="form-control validate"
+                                    required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="address">Permanent Address</label>
+                                <input id="address" name="address" type="text" class="form-control validate" required />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="emergencyContactPerson">Emergency Contact Person : (local) </label>
+                                <input id="emergencyContactPerson" name="emergencyContactPerson" type="text"
+                                    class="form-control validate" required />
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="emergencyContact">Emergency Phone Number</label>
+                                <input id="emergencyContact" name="emergencyContact" type="text"
+                                    class="form-control validate" required />
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="roomAlloted">Room Alloted</label>
+                                <select class="custom-select tm-select-accounts" id="roomAlloted" name="roomAlloted">
+                                    <option selected>Select Room</option>
+                                    {{#each data}}
+                                    <option value="{{this.name}}">{{ this.name }}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="allotmentDate">Allotment Date
+                                </label>
+                                <input id="allotmentDate" name="allotmentDate" type="date" class="form-control validate"
+                                    data-large-mode="true" />
+                            </div>
+
+
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                        <div class="tm-product-img-dummy mx-auto">
+                            <i class="fas fa-cloud-upload-alt tm-upload-icon"
+                                onclick="document.getElementById('fileInputPhoto').click();"></i>
+                        </div>
+                        <div class="custom-file mt-2 mb-5">
+                            <input id="fileInputPhoto" type="file" style="display:none;" />
+                            <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD PHOTOGRAPH"
+                                onclick="document.getElementById('fileInputPhoto').click();" />
+                        </div>
+                        <div class="tm-product-img-dummy mx-auto">
+                            <i class="fas fa-cloud-upload-alt tm-upload-icon"
+                                onclick="document.getElementById('fileInputId').click();"></i>
+                        </div>
+                        <div class="custom-file mt-2 mb-5">
+                            <input id="fileInputId" type="file" style="display:none;" />
+                            <input type="button" class="btn btn-primary btn-block mx-auto" value="UPLOAD ID"
+                                onclick="document.getElementById('fileInputId').click();" />
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Tenant Now</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

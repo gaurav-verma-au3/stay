@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row tm-content-row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-products">
+                <div class="tm-product-table-container">
+                    <table class="table table-hover tm-table-small tm-product-table">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">TENANT NAME</th>
+                                <th scope="col">CONTACT</th>
+                                <th scope="col">ROOM ALLOTED</th>
+                                <th scope="col">DATE OF ENROLMENT</th>
+                                <th scope="col">EDIT</th>
+                                <th scope="col">DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each data}}
+                            <tr>
+                                <td class="tm-product-name">{{this.name}}</td>
+                                <td> {{this.contact}} </td>
+                                <td> {{this.roomAlloted}} </td>
+                                <td> {{this.allotmentDate}} </td>
+                                <td>
+                                    <a href="tenants/update/{{this._id}}" class="tm-product-delete-link">
+                                        <i class="fas fa-pencil-alt tm-product-delete-icon"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="tenants/delete/{{this._id}}" class="tm-product-delete-link">
+                                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table container -->
+                <a href="/tenants/add" class="btn btn-primary btn-block text-uppercase mb-3">Add New Tenant</a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
