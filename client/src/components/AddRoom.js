@@ -21,7 +21,7 @@ class AddRoom extends Component {
   render() {
     return (
       <div className="container-fluid p-0">
-        <div className="container-fluid d-flex p-3  align-items-center bg-info ">
+        <div className="container-fluid d-flex py-3 px-0  align-items-center bg-info ">
  
             <h6 className="m-0 p-0">
             <strong className="m-0 p-0">Rooms</strong>
@@ -30,7 +30,7 @@ class AddRoom extends Component {
             <AddTenant />
             </div>
             <button
-            className="btn btn-primary btn-sm ml-3 p-1 px-3"
+            className="btn btn-primary btn-sm ml-3 p-1 px-1"
             data-toggle="modal"
             data-target="#exampleModal"
             data-whatever="@mdo"

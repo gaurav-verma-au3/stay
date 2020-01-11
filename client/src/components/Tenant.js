@@ -52,12 +52,12 @@ export class Tenant extends Component {
   };
   render() {
     return (
-      <div className="container-fluid p-5">
+      <div className="container-fluid bg-info p-5" >
         {this.props.tenants.map(tenant => {
           if (tenant._id === this.props.match.params.id)
             return (
               <div className="row">
-                <div className="col-md-4 col-sm-12">
+                <div className="col-md-4 bg-light pt-5 rounded col-sm-12">
                   <div className="row">
                     <div className="col-md-6 col-sm-12 d-flex justify-content-center">
                       <div class="card" style={{ width: "20rem" }}>
@@ -89,7 +89,7 @@ export class Tenant extends Component {
                         </button>
                       </div>
                     </div>
-                    <div className="col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div className="col-md-6  col-sm-12 d-flex justify-content-center">
                       <div class="card" style={{ width: "20rem" }}>
                         <img
                           class="card-img-top img-thumbnail"
@@ -162,7 +162,7 @@ export class Tenant extends Component {
                 </div>
                 {/*==================================Modal End======================================*/}
 
-                <div className="col-md-8 col-sm-12 p-5 border rounded">
+                <div className="col-md-8 bg-light col-sm-12 p-5  rounded">
                   <div className="container-fluid m-2 d-flex">
                     <div className="ml-auto">
                       <EditTenant currentTenant={tenant} />

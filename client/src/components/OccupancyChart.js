@@ -51,15 +51,15 @@
         <div className="p-4 bg-info">
           <h6 className="text-left mr-5" ><strong>Occupancy Status</strong></h6>
 
-          <div className="bg-light rounded" >
-          <PieChart  s width={500} height={500}>
+          <div className="bg-light d-flex justify-content-center rounded" >
+          <PieChart  s width={300} height={300}>
             <Pie
               data={data}
-              cx={250}
-              cy={250}
+              cx={150}
+              cy={150}
               labelLine={false}
               label={renderCustomizedLabel}
-              outerRadius={200}
+              outerRadius={100}
               fill="#8884d8"
               dataKey="value"
             >
@@ -71,7 +71,7 @@
               ))}
               </Pie>
 
-            </PieChart>
+              </PieChart>
           </div>
 
            </div> 

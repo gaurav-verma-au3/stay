@@ -20,8 +20,8 @@ class Home extends Component {
         <div className="container-fluid m-0 p-0">
           <Visuals />
         </div>
-        <div className="container-fluid" style={{ height: "45vh" }}>
-          <div className="row">
+        <div className="container-fluid p-0" style={{ height: "45vh" }}>
+          <div className="row m-0">
             <div className=" col-md-12 col-xs-12 p-4 bg-info  col-sm-12 ">
               <Rooms />
             </div>
@@ -30,7 +30,7 @@ class Home extends Component {
               <Tenants />
             </div> */}
           </div>
-          <div className="row">
+          <div className="row m-0">
             <div className="col-md-12 col-sm-12 col-xs-12 bg-info p-4">
               <Payments />
             </div>

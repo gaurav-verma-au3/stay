@@ -21,12 +21,12 @@ class AddPayment extends Component {
   render() {
     return (
       <div className="container-fluid p-0">
-        <div className="container-fluid p-3 bg-info d-flex align-items-center ">
+        <div className="container-fluid py-3 px-0 bg-info d-flex align-items-center ">
           <h6 className="m-0 p-0">
             <strong>Payments</strong>
           </h6>
           <button
-            className="btn btn-primary btn-sm p-1 px-3 m-0 ml-auto"
+            className="btn btn-primary btn-sm p-1 px-1 m-0 ml-auto"
             data-toggle="modal"
             data-target="#add-payment-modal"
             data-whatever="@mdo"

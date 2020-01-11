@@ -105,17 +105,17 @@ class PaymentsChart extends Component {
     return (
       <div className="p-4 bg-info">
         <h6 className="text-left mr-5" ><strong>Payments Overview</strong></h6>
-<div className="bg-light rounded" >
+        <div className="bg-light d-flex justify-content-center rounded" >
         <BarChart
 
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           data={data}
           margin={{
-            top: 70,
-            right: 50,
-            left: 50,
-            bottom: 50
+            top: 30,
+            right: 0,
+            left: 0,
+            bottom: 20
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />

@@ -6,11 +6,9 @@ import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { mapStateToProps } from "./store";
+import { RoomsFrame, TenantsFrame, TenantFrame, PaymentsFrame } from './components/Frame'
+
 import Tenant from './components/Tenant'
-import Rooms from "./components/Rooms";
-import Payments from "./components/Payments";
-
-
 class App extends Component {
   handleRedirect = () => {
     if (window.location.pathname === "/signup")
@@ -24,12 +22,13 @@ class App extends Component {
 
         <div className="container-fluid p-0">
           {!this.props.isLoggedIn.loggedIn ? (
-            <div className="row ">
+            <div className="row m-0 p-0">
               {this.handleRedirect()}
-              <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
-                <h1 style={{fontSize:"8rem"}}>mStay*</h1>
+              <div className="col-md-6 m-0 p-5 col-sm-12 d-flex align-items-center justify-content-center">
+                <img  className="img-fluid p-2 w-25" src="https://i.ibb.co/C1963Hb/UIHere-1.png"/>
+                <h1 style={{ fontSize: "6rem" }}>mStay*</h1>
               </div>
-              <div className="col-md-6 col-sm-12">
+              <div className="col-md-6  p-0 col-sm-12">
               <Route path="/login" component={Login} />
               <Route path="/signup" component={Signup} />
               </div>
@@ -43,11 +42,13 @@ class App extends Component {
                 ) : null}
                 <Nav />
                 <Route exact path="/" component={Home} />
-                <Route exact path="/tenants" component={Rooms} />
-                <Route exact path="/rooms" component={Rooms} />
-                <Route exact path="/payments" component={Payments}/>
+                
+                <Route exact path="/tenants" component={{TenantsFrame}} />
+                <Route exact path="/rooms" component={RoomsFrame} />
+                <Route exact path="/payments" component={PaymentsFrame}/>
                 <Route eaxct path="/tenants/:id" component={Tenant} />
-              </div>
+              
+                </div>
           )}
         </div>
       </Router>

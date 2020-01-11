@@ -88,7 +88,7 @@ export class AddTenant extends Component {
     return (
       <div>
         <button
-          className="btn btn-primary btn-sm p-1 px-3"
+          className="btn btn-primary btn-sm  ml-1 p-1 px-1"
           data-toggle="modal"
           data-target="#addTenantModal"
         >
