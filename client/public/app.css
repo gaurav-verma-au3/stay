@@ -6,3 +6,26 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
 }
+
+
+@media (min-width: 320px) {
+    *{
+        font-size: .85rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    *{
+        font-size: 1.05rem;
+    }
+ }
+
+@media (min-width: 992px) { *{
+    font-size: 1.1rem;
+} }
+
+@media (min-width: 1200px) { *{
+    font-size: 1.2rem;
+} }
+
+

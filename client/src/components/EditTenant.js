@@ -53,7 +53,7 @@ class EditTenant extends Component {
       this.state.selectedFile,
         this.state.selectedFile.name,
     );
-      console.log(public_idToDelete)
+      
       
     axios.post(`${API_ORIGIN_URL}/upload/${public_idToDelete}`, formData).then(({ data }) => {
       if (type === "idProof") {
@@ -111,22 +111,23 @@ class EditTenant extends Component {
   }
 
   render() {
-    console.log(this.state);
+console.log(this.state);
 
     return (
       <div>
         {/* ========================================Edit start============================================== */}
 
         <button
-          className="btn btn-primary ml-auto"
+          className="btn btn-sm btn-primary ml-auto"
           data-toggle="modal"
-          data-target="#addTenantModal"
+          data-target="#editTenantModal"
+          onClick={()=>console.log("editmodalopen")}
         >
-          Edit
+          <small>Edit</small>
         </button>
         <div
           className="modal fade"
-          id="addTenantModal"
+          id="editTenantModal"
           tabIndex="-1"
           role="dialog"
           aria-hidden="true"

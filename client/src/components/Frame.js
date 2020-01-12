@@ -2,6 +2,7 @@ import React from "react";
 import Rooms from "./Rooms";
 import Tenant from "./Tenant";
 import Payments from "./Payments";
+import Tenants from "./Tenants";
 
 const RoomsFrame = () => {
   return (
@@ -13,8 +14,9 @@ const RoomsFrame = () => {
 
 const TenantsFrame = () => {
   return <div className="p-3 bg-info">
-     <div className="p-3 bg-info"></div>
-  </div>;
+       <Tenants/>
+     </div>
+
 };
 
 const PaymentsFrame = () => {

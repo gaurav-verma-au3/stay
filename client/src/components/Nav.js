@@ -12,7 +12,7 @@ class Nav extends React.Component {
   render() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-info">
-        <a className="navbar-brand" href="/">mstay*</a>
+        <a className="navbar-brand font-weight-bold" style={{fontSize:"2rem"}} href="/">mstay*</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +31,7 @@ class Nav extends React.Component {
               <Link className="nav-link " to="/payments">Payments</Link>
                     </li>
                     <li className="nav-item">
-              <button className="nav-link btn btn-danger px-3" onClick={this.handleLogout}>Logout</button>
+              <p className="nav-link text-danger" style={{cursor:"pointer"}} onClick={this.handleLogout}>Logout</p>
             </li>
           </ul>
         </div>

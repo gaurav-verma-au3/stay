@@ -168,12 +168,12 @@ export class Tenant extends Component {
                       <EditTenant currentTenant={tenant} />
                     </div>
                     <Link to="/"><button
-                      className="btn btn-danger ml-2"
+                      className="btn btn-sm btn-danger ml-2"
                       onClick={() =>
                         this.handleDeleteTenant(tenant._id, tenant.owner)
                       }
                     >
-                      Delete
+                      <small>Delete</small>
                     </button></Link>
                   </div>
                   <p className="">

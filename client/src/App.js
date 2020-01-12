@@ -6,9 +6,10 @@ import Home from "./components/Home";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { mapStateToProps } from "./store";
-import { RoomsFrame, TenantsFrame, TenantFrame, PaymentsFrame } from './components/Frame'
+import { RoomsFrame, TenantsFrame,  PaymentsFrame } from './components/Frame'
 
 import Tenant from './components/Tenant'
+import Tenants from "./components/Tenants";
 class App extends Component {
   handleRedirect = () => {
     if (window.location.pathname === "/signup")
@@ -17,6 +18,8 @@ class App extends Component {
   };
   render() {
     return (
+ 
+ 
       <Router>
         
 
@@ -25,7 +28,7 @@ class App extends Component {
             <div className="row m-0 p-0">
               {this.handleRedirect()}
               <div className="col-md-6 m-0 p-5 col-sm-12 d-flex align-items-center justify-content-center">
-                <img  className="img-fluid p-2 w-25" src="https://i.ibb.co/C1963Hb/UIHere-1.png"/>
+                <img  className="img-fluid p-2 w-25" alt="" src="https://i.ibb.co/C1963Hb/UIHere-1.png"/>
                 <h1 style={{ fontSize: "6rem" }}>mStay*</h1>
               </div>
               <div className="col-md-6  p-0 col-sm-12">
@@ -43,7 +46,7 @@ class App extends Component {
                 <Nav />
                 <Route exact path="/" component={Home} />
                 
-                <Route exact path="/tenants" component={{TenantsFrame}} />
+                <Route exact path="/tenants" component={TenantsFrame} />
                 <Route exact path="/rooms" component={RoomsFrame} />
                 <Route exact path="/payments" component={PaymentsFrame}/>
                 <Route eaxct path="/tenants/:id" component={Tenant} />
