@@ -7,14 +7,13 @@ require("dotenv").config();
 let cloudinary = require("cloudinary").v2;
 
 router.post("/login", (req, res) => {
-  console.log(req.body);
   db.collection("users").findOne({ email: req.body.email }, function(
     err,
     data
   ) {
-    console.log(data.email, data.password, req.body.email, req.body.password);
-    if (data == null || data.password != req.body.password) {
-      console.log("failed");
+    if (err) res.send({ error: true, message: "Email or Password Mismatch !!!" });
+    if (!data || data.password != req.body.password) {
+    
       res.send({ error: true, message: "Email or Password Mismatch !!!" });
     } else {
       if (data.password == req.body.password);
