@@ -86,7 +86,7 @@ export class AddTenant extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="">
         <button
           className="btn btn-primary btn-sm  ml-1 p-1 px-1"
           data-toggle="modal"

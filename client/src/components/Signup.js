@@ -21,7 +21,7 @@ class Signup extends Component {
         style={{ height: "90vh" }}
       >
         <form
-          className="pt-5 pr-5 pl-5 bg-light border rounded"
+          className="pt-5 pr-5 pl-5 bg-light border rounded shadow"
           onSubmit={e => this.handleSubmit(e)}
         >
           <h2 >Sign Up</h2>

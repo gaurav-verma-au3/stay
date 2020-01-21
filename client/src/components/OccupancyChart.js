@@ -49,7 +49,7 @@
         <div className="p-4 bg-info ">
           <h6 className="text-left mr-5" ><strong>Occupancy Status</strong></h6>
 
-          <div className="bg-light d-flex justify-content-center rounded " >
+          <div className="bg-light d-flex justify-content-center rounded shadow" >
           <PieChart  s width={300} height={300}>
             <Pie
               data={data}

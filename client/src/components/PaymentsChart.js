@@ -105,7 +105,7 @@ class PaymentsChart extends Component {
     return (
       <div className="p-4 bg-info">
         <h6 className="text-left mr-5" ><strong>Payments Overview</strong></h6>
-        <div className="bg-light d-flex justify-content-center rounded" >
+        <div className="bg-light d-flex shadow justify-content-center rounded" >
         <BarChart
 
           width={300}

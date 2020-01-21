@@ -24,7 +24,7 @@ class Rooms extends Component {
   };
   render() {
     return (
-      <div className="bg-light rounded">
+      <div className="bg-light rounded shadow-lg">
         
         <AddRoom />
 

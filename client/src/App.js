@@ -29,7 +29,7 @@ class App extends Component {
               {this.handleRedirect()}
               <div className="col-md-6 m-0 p-5 col-sm-12 d-flex align-items-center justify-content-center">
                 <img  className="img-fluid p-2 w-25" alt="" src="https://i.ibb.co/C1963Hb/UIHere-1.png"/>
-                <h1 style={{ fontSize: "6rem" }}>mStay*</h1>
+                <h1 className="" style={{ fontSize: "6rem" }}>mStay*</h1>
               </div>
               <div className="col-md-6  p-0 col-sm-12">
               <Route path="/login" component={Login} />

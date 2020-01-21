@@ -21,7 +21,7 @@ class AddPayment extends Component {
   render() {
     return (
       <div className="container-fluid p-0">
-        <div className="container-fluid py-3 px-0 bg-info d-flex align-items-center ">
+        <div className="container-fluid py-3 px-3 bg-info d-flex align-items-center ">
           <h6 className="m-0 p-0">
             <strong>Payments</strong>
           </h6>

@@ -13,7 +13,7 @@ class Tenants extends Component {
     return (
 
 <div className="container-fluid p-0">
-        <div className="container-fluid d-flex py-3 px-0  align-items-center bg-info ">
+        <div className="container-fluid d-flex py-3 px-3  align-items-center bg-info shadow-lg">
  
             <h6 className="m-0 p-0">
             <strong className="m-0 p-0">Tenants</strong>
