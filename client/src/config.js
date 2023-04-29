@@ -1,4 +1,4 @@
-export const API_ORIGIN_URL ="https://mstay.herokuapp.com";
+export const API_ORIGIN_URL = window.location.origin;
 
 
 
